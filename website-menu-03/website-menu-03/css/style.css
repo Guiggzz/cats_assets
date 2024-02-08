@@ -1,6 +1,6 @@
 body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #000000;
+  background-color: #ffffff;
   height: 200vh;
   position: relative; }
   body:before {
@@ -22,7 +22,7 @@ body {
     visibility: visible; }
 
 p {
-  color: #b3b3b3;
+  color: #ffffff;
   font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6,
@@ -65,7 +65,7 @@ a {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a span {
       background: #007bff;
-      color: #fff;
+      color: #ffffff;
       border-radius: 30px;
       display: inline-block;
       padding: 5px 20px; }
@@ -76,7 +76,7 @@ a {
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 0px;
-        color: #fff;
+        color: #000000;
         font-size: 16px;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a > span {
@@ -191,7 +191,7 @@ a {
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: #fff;
+  background: #ffffff;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -325,7 +325,7 @@ a {
         .site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
           padding-left: 15px !important; }
 .backgroundnav{
-  background-color: #000000;
+  background-color: #ffffff;
   padding-bottom: 250px;
 
 }
@@ -336,9 +336,10 @@ a {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-color: #ffffff;
   border-radius: 5px;
   position: relative; /* Position relative pour le parent */
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 25px;
 }
 
 .card1 {
@@ -353,24 +354,39 @@ a {
 
 .card2 {
   grid-area: 1 / 1 / 2 / 2;
-  background-color: #ffffff;
-  padding: 20px;
   border-radius: 5px;
-  display: flex; /* Utiliser flex pour centrer le contenu */
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center; /* Centrer verticalement */
 }
-.texteintro { 
+.texteintro{ 
   color: #ffffff;
   text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 23px;
+  text-align: left;
 }
 
 .photointro { 
   grid-area: 1 / 2 / 2 / 3;
   border-radius: 5px; 
-  background-color: #ffffff;
 }
 
+.logopetit{
+  height: 2px;
+}
+
+.parentassociate{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  border-radius: 5px;
+}
+.carda1{
+  border: 1px solid #000000;
+  height: 10%;
+  width: 10%;
+
+}
 /* Media query pour masquer la partie photointro sur les écrans de moins de 1200px */
 @media only screen and (max-width: 1199px) {
   .photointro {
