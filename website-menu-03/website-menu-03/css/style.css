@@ -810,14 +810,15 @@ textarea {
   .descriptionservices ul li {
     font-size: 0.8rem;
   }
+
+  /* Ajouter une séparation entre les cartes */
+  .cardservices+.cardservices {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    /* Espace entre les cartes */
+  }
 }
 
-/* Ajouter une séparation entre les cartes */
-.cardservices+.cardservices {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  /* Espace entre les cartes */
-}
 
 
 /* min-width */
