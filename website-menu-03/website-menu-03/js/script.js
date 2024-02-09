@@ -17,9 +17,9 @@ function animateCounters() {
     const employeesTarget = 11;
     const projectsTarget = 2600;
 
-    const yearsStep = yearsTarget / 400; // 10 en 3 secondes
-    const employeesStep = employeesTarget / 400; // 11 en 3 secondes
-    const projectsStep = projectsTarget / 400; // 2600 en 3 secondes
+    const yearsStep = yearsTarget / 2000; // 10 en 3 secondes
+    const employeesStep = employeesTarget / 2000; // 11 en 3 secondes
+    const projectsStep = projectsTarget / 2000; // 2600 en 3 secondes
 
     let yearsIncrement = 0;
     let employeesIncrement = 0;
