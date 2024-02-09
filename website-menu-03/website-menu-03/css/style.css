@@ -610,14 +610,26 @@ a:hover {
 .counter-container {
   display: flex;
   justify-content: space-around;
-  /* Espacement équitable entre les compteurs */
+  flex-wrap: wrap;
+}
+
+.counter {
+  width: 30%;
+  /* Largeur initiale des compteurs */
+  text-align: center;
+  margin-bottom: 20px;
+  /* Espacement entre les compteurs */
   width: 100%;
   /* Pour s'assurer que les compteurs prennent toute la largeur */
   color: #007bff;
 }
 
-.counter {
-  text-align: center;
+/* Pour les petits écrans, afficher les compteurs en colonne */
+@media screen and (max-width: 768px) {
+  .counter {
+    width: 100%;
+    /* Les compteurs occupent toute la largeur */
+  }
 }
 
 
@@ -725,7 +737,7 @@ textarea {
 }
 
 .btn {
-  background-color: #333;
+  background-color: #00136a;
   color: #f4f4f4;
   padding: 12px 18px;
   border: none;
@@ -736,9 +748,77 @@ textarea {
   font-size: 1em;
 }
 
-.btn:hover {
-  color: #ffd700;
+
+.grid-containerr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.cardservices {
+  width: 45%;
+  /* Ajustez la largeur des cartes selon vos besoins */
+  margin-bottom: 20px;
+  /* Espace entre les cartes */
+}
+
+
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+@media screen and (max-width: 768px) {
+  .grid-containerr {
+    flex-direction: column;
+    /* Les cartes s'affichent en colonne sur les petits écrans */
+    align-items: center;
+    /* Centrer les cartes sur les petits écrans */
+  }
+
+  .cardservices {
+    width: 90%;
+    /* La largeur des cartes est ajustée pour occuper presque toute la largeur */
+    margin-bottom: 20px;
+    /* Espace entre les cartes */
+  }
+}
+
+
+.cardservices img {
+  max-width: 100%;
+  height: auto;
+}
+
+.titresection {
+  text-align: center;
+}
+
+.descriptionservices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.descriptionservices ul li {
+  margin-bottom: 5px;
+  /* Espace entre les éléments de liste */
+}
+
+/* Réduire la taille du texte pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .titresection {
+    font-size: 1.5rem;
+  }
+
+  .descriptionservices ul li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ajouter une séparation entre les cartes */
+.cardservices+.cardservices {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  /* Espace entre les cartes */
+}
+
 
 /* min-width */
 
@@ -847,74 +927,4 @@ textarea {
     background-color: #ffffff;
     padding-bottom: 100px;
   }
-}
-
-.grid-containerr {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.cardservices {
-  width: 45%;
-  /* Ajustez la largeur des cartes selon vos besoins */
-  margin-bottom: 20px;
-  /* Espace entre les cartes */
-}
-
-/* Ajoutez ces styles à votre fichier CSS existant */
-
-@media screen and (max-width: 768px) {
-  .grid-containerr {
-    flex-direction: column;
-    /* Les cartes s'affichent en colonne sur les petits écrans */
-    align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    /* Centrer les cartes sur les petits écrans */
-  }
-
-  .cardservices {
-    width: 90%;
-    /* La largeur des cartes est ajustée pour occuper presque toute la largeur */
-    margin-bottom: 20px;
-    /* Espace entre les cartes */
-  }
-}
-
-
-.cardservices img {
-  max-width: 100%;
-  height: auto;
-}
-
-.titresection {
-  text-align: center;
-}
-
-.descriptionservices ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.descriptionservices ul li {
-  margin-bottom: 5px;
-  /* Espace entre les éléments de liste */
-}
-
-/* Réduire la taille du texte pour les petits écrans */
-@media screen and (max-width: 768px) {
-  .titresection {
-    font-size: 1.5rem;
-  }
-
-  .descriptionservices ul li {
-    font-size: 0.8rem;
-  }
-}
-
-/* Ajouter une séparation entre les cartes */
-.cardservices+.cardservices {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  /* Espace entre les cartes */
 }
