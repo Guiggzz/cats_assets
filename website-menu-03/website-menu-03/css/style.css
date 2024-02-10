@@ -762,6 +762,51 @@ textarea {
   /* Espace entre les cartes */
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.slider {
+  margin-top: 50px;
+  height: 236px;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  width: calc(420px * 20);
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 420px;
+  height: 235px;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
 
 /* Ajoutez ces styles à votre fichier CSS existant */
 

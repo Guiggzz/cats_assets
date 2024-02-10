@@ -50,3 +50,4 @@ function animateCounters() {
 }
 
 animateCounters();
+
