@@ -517,7 +517,6 @@ a:hover {
 .texteintro {
   color: #ffffff;
   text-align: center;
-  font-family: Copperplate, Papyrus, fantasy;
   font-size: 23px;
   text-align: left;
 }
@@ -549,7 +548,7 @@ a:hover {
   gap: 20px;
   justify-content: center;
   padding-bottom: 100px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.154);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.089);
 }
 
 .card {
@@ -605,6 +604,7 @@ a:hover {
   padding: 20px;
   border-radius: 10px;
   padding-bottom: 70px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.068);
 }
 
 .counter-container {
@@ -644,7 +644,7 @@ a:hover {
 
 .cardservices {
   flex: 1 0 calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  max-width: calc(30% - 20px);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
@@ -661,13 +661,13 @@ a:hover {
 
 .descriptionservices {
   text-align: left;
+  padding-left: px;
+  text-align: left;
 }
 
 .cardservices h3 {
   text-align: center;
 }
-
-
 
 
 .modern-footer {
@@ -770,7 +770,7 @@ body {
 
 
 .slider {
-  margin-top: 50px;
+  margin-top: 20px;
   height: 236px;
   position: relative;
   width: 100%;
@@ -780,7 +780,7 @@ body {
 }
 
 .slide-track {
-  width: calc(420px * 20);
+  width: calc(100px * 30);
   display: flex;
   gap: 15px;
   animation: scroll 20s linear infinite;
@@ -788,14 +788,18 @@ body {
 }
 
 .slide {
-  width: 420px;
-  height: 235px;
+  width: 300px;
+  height: 100px;
   display: grid;
   place-items: center;
   transition: 0.5s;
   cursor: pointer;
-  background-color: green;
   border-radius: 10px;
+}
+
+.slide img {
+  max-width: 300px;
+  max-height: 100px;
 }
 
 @keyframes scroll {
@@ -813,13 +817,14 @@ body {
 @media screen and (max-width: 768px) {
   .grid-containerr {
     flex-direction: column;
+    width: auto;
     /* Les cartes s'affichent en colonne sur les petits écrans */
     align-items: center;
     /* Centrer les cartes sur les petits écrans */
   }
 
   .cardservices {
-    width: 90%;
+    width: 100%;
     /* La largeur des cartes est ajustée pour occuper presque toute la largeur */
     margin-bottom: 20px;
     /* Espace entre les cartes */
@@ -861,6 +866,10 @@ body {
     border-top: 1px solid #ccc;
     padding-top: 20px;
     /* Espace entre les cartes */
+  }
+
+  .slide-track {
+    width: calc(10px * 10);
   }
 }
 
