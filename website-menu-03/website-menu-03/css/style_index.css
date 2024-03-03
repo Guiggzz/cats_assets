@@ -1,0 +1,330 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border-radius: 5px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 100px;
+}
+
+.card1 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #1952ee;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 5px;
+}
+
+.texteintro {
+  color: #ffffff;
+  text-align: center;
+  font-size: 23px;
+  text-align: left;
+}
+
+.photointro {
+  grid-area: 1 / 2 / 2 / 3;
+  border-radius: 5px;
+}
+
+.titresection {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+
+}
+
+.titresection h2 {
+  color: #000000;
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 5px;
+  text-align: left;
+  padding-top: 10000px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 100px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.089);
+}
+
+.card {
+  flex: 1 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.description {
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(35, 35, 179);
+  opacity: 0;
+  color: white;
+  text-align: center;
+  padding-top: 50%;
+  transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 0.65;
+}
+
+.cardo {
+  display: flex;
+  flex-direction: column;
+  /* Organiser les éléments en colonne */
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.068);
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.counter {
+  width: 30%;
+  /* Largeur initiale des compteurs */
+  text-align: center;
+  margin-bottom: 20px;
+  /* Espacement entre les compteurs */
+  width: 100%;
+  /* Pour s'assurer que les compteurs prennent toute la largeur */
+  color: #007bff;
+}
+
+/* Pour les petits écrans, afficher les compteurs en colonne */
+@media screen and (max-width: 768px) {
+  .counter {
+    width: 100%;
+    /* Les compteurs occupent toute la largeur */
+  }
+}
+
+
+.value {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.counter .value::after {
+  content: "+";
+}
+
+.cardservices {
+  flex: 1 0 calc(50% - 20px);
+  max-width: calc(30% - 20px);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.cardservices img {
+  width: 170px;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  /* Pour centrer horizontalement */
+}
+
+
+.descriptionservices {
+  text-align: left;
+  padding-left: px;
+  text-align: left;
+}
+
+.cardservices h3 {
+  text-align: center;
+}
+
+
+.grid-containerr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardservices {
+  width: 45%;
+  /* Ajustez la largeur des cartes selon vos besoins */
+  margin-bottom: 20px;
+  /* Espace entre les cartes */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.slider {
+  margin-top: 20px;
+  height: 236px;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  width: calc(100px * 30);
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 300px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.slide img {
+  max-width: 300px;
+  max-height: 100px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
+
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+@media screen and (max-width: 768px) {
+  .grid-containerr {
+    flex-direction: column;
+    width: auto;
+    /* Les cartes s'affichent en colonne sur les petits écrans */
+    align-items: center;
+    /* Centrer les cartes sur les petits écrans */
+  }
+
+  .cardservices {
+    width: 100%;
+    /* La largeur des cartes est ajustée pour occuper presque toute la largeur */
+    margin-bottom: 20px;
+    /* Espace entre les cartes */
+  }
+}
+
+
+.cardservices img {
+  max-width: 100%;
+  height: auto;
+}
+
+.titresection {
+  text-align: center;
+}
+
+.descriptionservices ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.descriptionservices ul li {
+  margin-bottom: 5px;
+  /* Espace entre les éléments de liste */
+}
+
+/* Réduire la taille du texte pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .titresection {
+    font-size: 1.5rem;
+  }
+
+  .descriptionservices ul li {
+    font-size: 0.8rem;
+  }
+
+  /* Ajouter une séparation entre les cartes */
+  .cardservices+.cardservices {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    /* Espace entre les cartes */
+  }
+
+  .slide-track {
+    width: calc(10px * 10);
+  }
+}
+
+/* min-width */
+
+@media only screen and (min-width: 550px) {
+  .card {
+    max-width: calc(17% - 20px);
+    flex: 1 0 calc(17% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .photointro {
+    display: none;
+  }
+
+  .card1 {
+    grid-area: 1 / 1 / 2 / span 2;
+  }
+
+  .card {
+    flex: 1 0 calc(30%);
+    max-width: calc(30%);
+  }
+
+  .parent {
+    margin-bottom: 60px;
+  }
+
+  .backgroundnav {
+    background-color: #ffffff;
+    padding-bottom: 100px;
+  }
+}

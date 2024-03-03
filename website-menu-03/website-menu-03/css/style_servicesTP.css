@@ -1,0 +1,32 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Utilise deux colonnes sur tous les écrans */
+    grid-gap: 20px;
+    /* Espacement entre les éléments */
+}
+
+.texte {
+    background-color: #f0f0f0;
+    /* Couleur de fond pour la section de texte (facultatif) */
+    padding: 20px;
+    /* Espacement interne pour la section de texte (facultatif) */
+}
+
+.image {
+    text-align: center;
+    /* Centre l'image à l'intérieur de son conteneur */
+}
+
+.carousel-item img {
+    border-radius: 5px;
+    /* Ajoute un border radius aux images du carousel */
+}
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: 1fr;
+        /* Passe à une seule colonne sur les écrans plus petits */
+    }
+}
