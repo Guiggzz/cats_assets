@@ -251,6 +251,7 @@ body {
     /* La largeur des cartes est ajustée pour occuper presque toute la largeur */
     margin-bottom: 20px;
     /* Espace entre les cartes */
+    max-width: calc(60% - 20px);
   }
 }
 
